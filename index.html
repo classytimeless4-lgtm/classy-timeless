@@ -20,162 +20,150 @@ body{
 }
 
 /* HEADER */
-
 header{
     background:#111;
     color:white;
-    padding:16px 5%;
+    height:84px;
     display:flex;
     align-items:center;
     justify-content:space-between;
+    padding:0 5%;
     position:sticky;
     top:0;
-    z-index:1000;
+    z-index:100;
 }
 
 .logo{
-    font-size:23px;
+    font-size:30px;
     font-weight:bold;
     letter-spacing:2px;
-}
-
-nav{
-    display:flex;
-    gap:25px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    font-size:14px;
+    margin-left:30px;
+    font-size:18px;
 }
 
 nav a:hover{
-    color:#d4af37;
+    color:#e0b52f;
 }
 
 /* HERO */
-
 .hero{
-    min-height:520px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px 20px;
-
+    height:520px;
     background:
     linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.62)),
-    url("https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=1600&q=80");
-
+    url("https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1800&q=80");
     background-size:cover;
     background-position:center;
-}
-
-.hero-content{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
     color:white;
-    max-width:700px;
 }
 
-.hero-content p{
-    color:#d4af37;
-    letter-spacing:3px;
-    margin-bottom:15px;
-    font-size:14px;
+.hero-content h4{
+    color:#e0b52f;
+    letter-spacing:5px;
+    margin-bottom:20px;
+    font-size:20px;
 }
 
 .hero-content h1{
-    font-size:50px;
-    margin-bottom:15px;
+    font-size:65px;
+    margin-bottom:20px;
 }
 
-.hero-content h2{
-    font-size:22px;
-    font-weight:normal;
-    margin-bottom:25px;
+.hero-content p{
+    font-size:25px;
+    margin-bottom:35px;
 }
 
 .shop-btn{
-    display:inline-block;
-    background:#d4af37;
+    background:#e0b52f;
     color:#111;
-    padding:14px 30px;
-    text-decoration:none;
+    border:0;
+    padding:18px 45px;
+    font-size:18px;
     font-weight:bold;
-    border-radius:4px;
+    border-radius:5px;
+    cursor:pointer;
 }
 
-/* SECTION */
-
-.section{
-    max-width:1200px;
-    margin:auto;
-    padding:55px 20px;
+.shop-btn:hover{
+    background:#f2c842;
 }
 
-.section-title{
+/* SHOP */
+.shop{
+    padding:60px 4%;
+}
+
+.shop-title{
     text-align:center;
     margin-bottom:30px;
 }
 
-.section-title p{
-    color:#777;
-    margin-top:8px;
+.shop-title h2{
+    font-size:38px;
+    margin-bottom:10px;
 }
 
-/* SEARCH */
-
-.search-box{
-    max-width:500px;
-    margin:0 auto 25px;
+.shop-title p{
+    color:#666;
+    font-size:18px;
 }
 
-.search-box input{
-    width:100%;
-    padding:14px 18px;
+.search{
+    width:60%;
+    max-width:700px;
+    display:block;
+    margin:30px auto;
+    padding:18px 25px;
     border:1px solid #ddd;
     border-radius:30px;
+    font-size:18px;
     outline:none;
-    font-size:15px;
 }
 
-/* CATEGORY */
-
-.categories{
+.filters{
     display:flex;
     justify-content:center;
-    gap:10px;
+    gap:15px;
+    margin-bottom:40px;
     flex-wrap:wrap;
-    margin-bottom:35px;
 }
 
-.category-btn{
+.filter{
+    padding:13px 28px;
     border:1px solid #ddd;
     background:white;
-    padding:10px 20px;
-    border-radius:25px;
+    border-radius:30px;
     cursor:pointer;
+    font-size:16px;
 }
 
-.category-btn.active,
-.category-btn:hover{
+.filter.active,
+.filter:hover{
     background:#111;
     color:white;
 }
 
 /* PRODUCTS */
-
 .products{
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:20px;
+    gap:25px;
 }
 
 .product{
     background:white;
-    border-radius:10px;
+    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 4px 18px rgba(0,0,0,.08);
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
     transition:.3s;
 }
 
@@ -183,874 +171,810 @@ nav a:hover{
     transform:translateY(-5px);
 }
 
-.product-image{
-    position:relative;
-    overflow:hidden;
-}
-
-.product-image img{
+.product-img{
     width:100%;
-    height:270px;
+    height:300px;
     object-fit:cover;
-    display:block;
-    transition:.4s;
-}
-
-.product:hover img{
-    transform:scale(1.05);
-}
-
-.badge{
-    position:absolute;
-    top:12px;
-    left:12px;
-    background:#111;
-    color:white;
-    padding:6px 10px;
-    font-size:11px;
-    border-radius:3px;
 }
 
 .product-info{
-    padding:17px;
+    padding:22px;
+}
+
+.badge{
+    display:inline-block;
+    background:#111;
+    color:white;
+    padding:7px 12px;
+    border-radius:4px;
+    font-size:12px;
+    margin-bottom:12px;
 }
 
 .product-info h3{
-    font-size:17px;
-    margin-bottom:8px;
-}
-
-.rating{
-    color:#d4af37;
-    font-size:14px;
-    margin-bottom:8px;
-}
-
-.old-price{
-    color:#999;
-    text-decoration:line-through;
-    font-size:13px;
-    margin-right:7px;
+    font-size:21px;
+    margin-bottom:10px;
 }
 
 .price{
-    font-size:20px;
+    font-size:23px;
     font-weight:bold;
+    margin-bottom:15px;
 }
 
 .order-btn{
     width:100%;
-    margin-top:15px;
-    padding:12px;
+    padding:13px;
     background:#111;
     color:white;
-    border:0;
-    border-radius:5px;
+    border:none;
+    border-radius:7px;
     cursor:pointer;
-    font-size:14px;
+    font-size:16px;
+    font-weight:bold;
 }
 
 .order-btn:hover{
-    background:#d4af37;
+    background:#e0b52f;
     color:#111;
 }
 
-/* FEATURES */
-
-.features{
-    background:#111;
-    color:white;
-}
-
-.feature-grid{
-    max-width:1100px;
-    margin:auto;
-    padding:45px 20px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:30px;
-    text-align:center;
-}
-
-.feature h3{
-    margin-bottom:8px;
-}
-
-.feature p{
-    color:#aaa;
-    font-size:14px;
-}
-
-/* FOOTER */
-
-footer{
-    background:#080808;
-    color:white;
-    text-align:center;
-    padding:30px 20px;
-}
-
-footer p{
-    color:#999;
-    margin-top:8px;
-    font-size:13px;
-}
-
-/* MOBILE */
-
-@media(max-width:900px){
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-}
-
-@media(max-width:600px){
-
-    header{
-        padding:15px;
-    }
-
-    nav{
-        gap:12px;
-    }
-
-    nav a{
-        font-size:12px;
-    }
-
-    .hero{
-        min-height:450px;
-    }
-
-    .hero-content h1{
-        font-size:36px;
-    }
-
-    .hero-content h2{
-        font-size:18px;
-    }
-
-    .products{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
-    }
-
-    .product-image img{
-        height:190px;
-    }
-
-    .product-info{
-        padding:12px;
-    }
-
-    .product-info h3{
-        font-size:14px;
-    }
-
-    .price{
-        font-size:17px;
-    }
-
-    .feature-grid{
-        grid-template-columns:1fr;
-    }
-
-}
-
 /* ORDER MODAL */
-.order-modal{
+.modal{
     display:none;
     position:fixed;
-    z-index:3000;
+    z-index:999;
     left:0;
     top:0;
     width:100%;
     height:100%;
-    background:rgba(0,0,0,.65);
-    padding:20px;
-    overflow-y:auto;
+    background:rgba(0,0,0,.7);
+    overflow:auto;
 }
-.order-modal.show{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-.order-box{
-    width:100%;
-    max-width:520px;
+
+.modal-box{
     background:white;
-    border-radius:12px;
-    padding:25px;
+    width:90%;
+    max-width:600px;
+    margin:50px auto;
+    padding:30px;
+    border-radius:15px;
     position:relative;
-    box-shadow:0 10px 40px rgba(0,0,0,.25);
 }
-.order-close{
+
+.close{
     position:absolute;
-    right:15px;
-    top:10px;
-    border:0;
-    background:transparent;
-    font-size:28px;
+    right:20px;
+    top:15px;
+    font-size:30px;
     cursor:pointer;
-    color:#555;
 }
-.order-box h2{ margin-bottom:6px; }
-.order-product{
-    background:#f7f7f7;
-    padding:12px;
-    border-radius:7px;
-    margin:15px 0;
+
+.modal-box h2{
+    text-align:center;
+    margin-bottom:8px;
 }
-.order-box label{
+
+.selected-product{
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+}
+
+.form-group{
+    margin-bottom:18px;
+}
+
+.form-group label{
     display:block;
+    margin-bottom:7px;
     font-weight:bold;
-    font-size:14px;
-    margin:12px 0 6px;
 }
-.order-box input,
-.order-box textarea,
-.order-box select{
+
+.form-group input,
+.form-group textarea,
+.form-group select{
     width:100%;
-    padding:12px;
-    border:1px solid #ddd;
-    border-radius:6px;
-    font-size:14px;
-    outline:none;
+    padding:13px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    font-size:16px;
 }
-.order-box textarea{
-    min-height:85px;
-    resize:vertical;
+
+.form-group textarea{
+    height:90px;
+    resize:none;
 }
-.total-box{
-    margin-top:18px;
+
+.summary{
+    background:#f5f5f5;
+    padding:18px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+.summary-row{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:10px;
+    font-size:17px;
+}
+
+.total{
+    border-top:1px solid #ccc;
+    padding-top:12px;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.place-order{
+    width:100%;
+    margin-top:20px;
     padding:15px;
     background:#111;
     color:white;
-    border-radius:7px;
-}
-.total-row{
-    display:flex;
-    justify-content:space-between;
-    margin:7px 0;
-}
-.total-final{
-    border-top:1px solid #555;
-    padding-top:10px;
-    margin-top:10px;
-    font-size:20px;
-    font-weight:bold;
-}
-.confirm-order{
-    width:100%;
-    margin-top:15px;
-    padding:14px;
-    background:#d4af37;
-    color:#111;
     border:0;
-    border-radius:6px;
-    cursor:pointer;
+    border-radius:7px;
+    font-size:18px;
     font-weight:bold;
-    font-size:15px;
-}
-.confirm-order:hover{
-    background:#111;
-    color:white;
+    cursor:pointer;
 }
 
+.place-order:hover{
+    background:#e0b52f;
+    color:#111;
+}
+
+/* FOOTER */
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:35px;
+    margin-top:40px;
+}
+
+@media(max-width:1000px){
+    .products{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:600px){
+    header{
+        height:auto;
+        padding:20px;
+        flex-direction:column;
+        gap:15px;
+    }
+
+    nav a{
+        margin:0 8px;
+        font-size:14px;
+    }
+
+    .hero{
+        height:450px;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .search{
+        width:95%;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+}
 </style>
 </head>
 
 <body>
 
 <!-- HEADER -->
-
 <header>
+    <div class="logo">CLASSY-TIMELESS</div>
 
-<div class="logo">
-CLASSY-TIMELESS
-</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#shop">Shop</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#shop">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 </header>
 
 
 <!-- HERO -->
-
 <section class="hero" id="home">
+    <div class="hero-content">
+        <h4>PREMIUM WATCH COLLECTION</h4>
+        <h1>CLASSY-TIMELESS</h1>
+        <p>Elegant Designs. Reliable Quality.</p>
 
-<div class="hero-content">
-
-<p>PREMIUM WATCH COLLECTION</p>
-
-<h1>CLASSY-TIMELESS</h1>
-
-<h2>
-Elegant Designs. Reliable Quality.
-</h2>
-
-<a href="#shop" class="shop-btn">
-SHOP NOW
-</a>
-
-</div>
-
+        <button class="shop-btn" onclick="goToShop()">
+            SHOP NOW
+        </button>
+    </div>
 </section>
 
 
 <!-- SHOP -->
+<section class="shop" id="shop">
 
-<section class="section" id="shop">
+    <div class="shop-title">
+        <h2>Our Collection</h2>
+        <p>Discover our premium collection</p>
+    </div>
 
-<div class="section-title">
+    <input
+        type="text"
+        id="search"
+        class="search"
+        placeholder="Search your watch..."
+        onkeyup="searchProducts()"
+    >
 
-<h2>Our Watches</h2>
+    <div class="filters">
+        <button class="filter active" onclick="filterProducts('all',this)">
+            All
+        </button>
 
-<p>
-Discover our premium collection
-</p>
+        <button class="filter" onclick="filterProducts('men',this)">
+            Men
+        </button>
 
-</div>
+        <button class="filter" onclick="filterProducts('women',this)">
+            Women
+        </button>
 
+        <button class="filter" onclick="filterProducts('premium',this)">
+            Premium
+        </button>
+    </div>
 
-<!-- SEARCH -->
 
-<div class="search-box">
+    <div class="products" id="products">
 
-<input
-type="text"
-id="searchInput"
-placeholder="Search your watch..."
-onkeyup="searchProducts()"
->
 
-</div>
+        <!-- PRODUCT 1 -->
+        <div class="product" data-category="men premium" data-name="Classic Black Watch">
 
+            <img
+                class="product-img"
+                src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=900&q=80"
+                alt="Classic Black Watch"
+            >
 
-<!-- CATEGORY -->
+            <div class="product-info">
 
-<div class="categories">
+                <span class="badge">BEST SELLER</span>
 
-<button
-class="category-btn active"
-onclick="filterProducts('all',this)">
-All
-</button>
+                <h3>Classic Black Watch</h3>
 
-<button
-class="category-btn"
-onclick="filterProducts('Men',this)">
-Men
-</button>
+                <div class="price">৳2,500</div>
 
-<button
-class="category-btn"
-onclick="filterProducts('Women',this)">
-Women
-</button>
+                <button
+                    class="order-btn"
+                    onclick="openOrder('Classic Black Watch',2500)"
+                >
+                    ORDER NOW
+                </button>
 
-<button
-class="category-btn"
-onclick="filterProducts('Premium',this)">
-Premium
-</button>
+            </div>
+        </div>
 
-</div>
 
+        <!-- PRODUCT 2 -->
+        <div class="product" data-category="men premium" data-name="Luxury Silver Watch">
 
-<!-- PRODUCTS -->
+            <img
+                class="product-img"
+                src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=900&q=80"
+                alt="Luxury Silver Watch"
+            >
 
-<div class="products" id="productContainer">
+            <div class="product-info">
 
+                <span class="badge">PREMIUM</span>
 
-<!-- PRODUCT 1 -->
+                <h3>Luxury Silver Watch</h3>
 
-<div class="product"
-data-category="Men"
-data-name="Classic Black Watch">
+                <div class="price">৳3,500</div>
 
-<div class="product-image">
+                <button
+                    class="order-btn"
+                    onclick="openOrder('Luxury Silver Watch',3500)"
+                >
+                    ORDER NOW
+                </button>
 
-<span class="badge">
-BEST SELLER
-</span>
+            </div>
+        </div>
 
-<img
-src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=700&q=80"
-alt="Classic Black Watch"
->
 
-</div>
+        <!-- PRODUCT 3 -->
+        <div class="product" data-category="men" data-name="Royal Black Watch">
 
-<div class="product-info">
+            <img
+                class="product-img"
+                src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=900&q=80"
+                alt="Royal Black Watch"
+            >
 
-<h3>Classic Black Watch</h3>
+            <div class="product-info">
 
-<div class="rating">
-★★★★★
-</div>
+                <span class="badge">NEW</span>
 
-<span class="old-price">
-৳1,899
-</span>
+                <h3>Royal Black Watch</h3>
 
-<span class="price">
-৳1,499
-</span>
+                <div class="price">৳2,900</div>
 
-<button
-class="order-btn"
-onclick="orderProduct('Classic Black Watch',1499)">
-ORDER NOW
-</button>
+                <button
+                    class="order-btn"
+                    onclick="openOrder('Royal Black Watch',2900)"
+                >
+                    ORDER NOW
+                </button>
 
-</div>
+            </div>
+        </div>
 
-</div>
 
+        <!-- PRODUCT 4 -->
+        <div class="product" data-category="women premium" data-name="Elegant Women's Watch">
 
-<!-- PRODUCT 2 -->
+            <img
+                class="product-img"
+                src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=900&q=80"
+                alt="Elegant Women's Watch"
+            >
 
-<div class="product"
-data-category="Premium"
-data-name="Luxury Silver Watch">
+            <div class="product-info">
 
-<div class="product-image">
+                <span class="badge">NEW</span>
 
-<span class="badge">
-PREMIUM
-</span>
+                <h3>Elegant Women's Watch</h3>
 
-<img
-src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=700&q=80"
-alt="Luxury Silver Watch"
->
+                <div class="price">৳3,200</div>
 
-</div>
+                <button
+                    class="order-btn"
+                    onclick="openOrder('Elegant Women\'s Watch',3200)"
+                >
+                    ORDER NOW
+                </button>
 
-<div class="product-info">
+            </div>
+        </div>
 
-<h3>Luxury Silver Watch</h3>
 
-<div class="rating">
-★★★★★
-</div>
-
-<span class="old-price">
-৳2,499
-</span>
-
-<span class="price">
-৳1,999
-</span>
-
-<button
-class="order-btn"
-onclick="orderProduct('Luxury Silver Watch',1999)">
-ORDER NOW
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUCT 3 -->
-
-<div class="product"
-data-category="Men"
-data-name="Royal Black Watch">
-
-<div class="product-image">
-
-<span class="badge">
-NEW
-</span>
-
-<img
-src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=700&q=80"
-alt="Royal Black Watch"
->
-
-</div>
-
-<div class="product-info">
-
-<h3>Royal Black Watch</h3>
-
-<div class="rating">
-★★★★★
-</div>
-
-<span class="old-price">
-৳2,299
-</span>
-
-<span class="price">
-৳1,799
-</span>
-
-<button
-class="order-btn"
-onclick="orderProduct('Royal Black Watch',1799)">
-ORDER NOW
-</button>
-
-</div>
-
-</div>
-
-
-<!-- PRODUCT 4 -->
-
-<div class="product"
-data-category="Women"
-data-name="Elegant Women's Watch">
-
-<div class="product-image">
-
-<span class="badge">
-NEW
-</span>
-
-<img
-src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=700&q=80"
-alt="Elegant Women's Watch"
->
-
-</div>
-
-<div class="product-info">
-
-<h3>Elegant Women's Watch</h3>
-
-<div class="rating">
-★★★★★
-</div>
-
-<span class="old-price">
-৳2,199
-</span>
-
-<span class="price">
-৳1,699
-</span>
-
-<button
-class="order-btn"
-onclick="orderProduct('Elegant Womens Watch',1699)">
-ORDER NOW
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FEATURES -->
-
-<section class="features">
-
-<div class="feature-grid">
-
-<div class="feature">
-
-<h3>Premium Quality</h3>
-
-<p>
-Carefully selected watches.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<h3>Fast Delivery</h3>
-
-<p>
-Delivery available across Bangladesh.
-</p>
-
-</div>
-
-
-<div class="feature">
-
-<h3>Easy Ordering</h3>
-
-<p>
-Simple and secure order process.
-</p>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
 <!-- ABOUT -->
+<section id="about" style="padding:60px 8%; text-align:center;">
 
-<section class="section" id="about">
+    <h2 style="font-size:35px;margin-bottom:15px;">
+        About Classy-Timeless
+    </h2>
 
-<div class="section-title">
-
-<h2>About Classy-Timeless</h2>
-
-<p>
-Premium watches for timeless style.
-</p>
-
-</div>
+    <p style="font-size:18px;color:#666;line-height:1.8;">
+        Classy-Timeless brings elegant and premium watches
+        for men and women. We focus on stylish designs,
+        quality products and reliable service.
+    </p>
 
 </section>
 
 
+<!-- CONTACT -->
+<section id="contact" style="padding:40px 8%;text-align:center;">
+
+    <h2>Contact Us</h2>
+
+    <p style="margin-top:15px;">
+        For product information and orders, please use the
+        ORDER NOW button.
+    </p>
+
+</section>
+
+
+<!-- ORDER MODAL -->
+<div class="modal" id="orderModal">
+
+    <div class="modal-box">
+
+        <span class="close" onclick="closeOrder()">&times;</span>
+
+        <h2>Place Your Order</h2>
+
+        <div class="selected-product">
+            Product:
+            <strong id="selectedProduct"></strong>
+        </div>
+
+
+        <!-- CUSTOMER NAME -->
+        <div class="form-group">
+
+            <label>
+                Your Name *
+            </label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your full name"
+                required
+            >
+
+        </div>
+
+
+        <!-- PHONE -->
+        <div class="form-group">
+
+            <label>
+                Phone Number *
+            </label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="01XXXXXXXXX"
+                required
+            >
+
+        </div>
+
+
+        <!-- ADDRESS -->
+        <div class="form-group">
+
+            <label>
+                Full Address *
+            </label>
+
+            <textarea
+                id="customerAddress"
+                placeholder="Enter your full delivery address"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <!-- DELIVERY AREA -->
+        <div class="form-group">
+
+            <label>
+                Delivery Area *
+            </label>
+
+            <select
+                id="deliveryArea"
+                onchange="calculateTotal()"
+            >
+
+                <option value="dhaka">
+                    Inside Dhaka — ৳60
+                </option>
+
+                <option value="outside">
+                    Outside Dhaka — ৳120
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <!-- ORDER SUMMARY -->
+        <div class="summary">
+
+            <div class="summary-row">
+
+                <span>Product Price</span>
+
+                <strong>
+                    ৳<span id="productPrice">0</span>
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>Delivery Charge</span>
+
+                <strong>
+                    ৳<span id="deliveryCharge">60</span>
+                </strong>
+
+            </div>
+
+
+            <div class="summary-row total">
+
+                <span>Total Amount</span>
+
+                <strong>
+                    ৳<span id="totalAmount">0</span>
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="place-order"
+            onclick="placeOrder()"
+        >
+            PLACE ORDER
+        </button>
+
+    </div>
+
+</div>
+
+
 <!-- FOOTER -->
+<footer>
 
-<footer id="contact">
+    <h3>CLASSY-TIMELESS</h3>
 
-<h3>CLASSY-TIMELESS</h3>
+    <p style="margin-top:10px;">
+        Premium Watches • Elegant Style • Reliable Quality
+    </p>
 
-<p>
-Premium Watches for Timeless Style
-</p>
-
-<p>
-© 2026 Classy-Timeless. All Rights Reserved.
-</p>
+    <p style="margin-top:15px;">
+        © 2026 Classy-Timeless. All Rights Reserved.
+    </p>
 
 </footer>
 
 
 <script>
 
-/* SEARCH */
-
-function searchProducts(){
-
-let input =
-document.getElementById("searchInput")
-.value
-.toLowerCase();
-
-let products =
-document.querySelectorAll(".product");
-
-products.forEach(function(product){
-
-let name =
-product.dataset.name.toLowerCase();
-
-if(name.includes(input)){
-
-product.style.display="block";
-
-}else{
-
-product.style.display="none";
-
-}
-
-});
-
-}
-
-
-/* CATEGORY FILTER */
-
-function filterProducts(category,button){
-
-let products =
-document.querySelectorAll(".product");
-
-let buttons =
-document.querySelectorAll(".category-btn");
-
-buttons.forEach(function(btn){
-
-btn.classList.remove("active");
-
-});
-
-button.classList.add("active");
-
-
-products.forEach(function(product){
-
-if(
-category === "all" ||
-product.dataset.category === category
-){
-
-product.style.display="block";
-
-}else{
-
-product.style.display="none";
-
-}
-
-});
-
-}
-
-
-
-/* ORDER SYSTEM */
-
+let selectedPrice = 0;
 let selectedProductName = "";
-let selectedProductPrice = 0;
 
-function orderProduct(productName,price){
+
+/* GO TO SHOP */
+function goToShop(){
+
+    document.getElementById("shop").scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* OPEN ORDER */
+function openOrder(productName, price){
 
     selectedProductName = productName;
-    selectedProductPrice = price;
+    selectedPrice = price;
 
-    document.getElementById("orderProductName").textContent = productName;
-    document.getElementById("orderProductPrice").textContent = price;
-    document.getElementById("summaryProductPrice").textContent = price;
+    document.getElementById("selectedProduct").innerText =
+        productName;
 
-    document.getElementById("customerName").value = "";
-    document.getElementById("customerPhone").value = "";
-    document.getElementById("customerAddress").value = "";
-    document.getElementById("deliveryArea").value = "60";
+    document.getElementById("productPrice").innerText =
+        price;
 
-    updateOrderTotal();
+    document.getElementById("deliveryArea").value =
+        "dhaka";
 
-    document.getElementById("orderModal").classList.add("show");
-    document.body.style.overflow = "hidden";
+    calculateTotal();
+
+    document.getElementById("orderModal").style.display =
+        "block";
+
 }
 
-function updateOrderTotal(){
 
-    const deliveryCharge =
-        Number(document.getElementById("deliveryArea").value);
+/* CLOSE ORDER */
+function closeOrder(){
 
-    const total = selectedProductPrice + deliveryCharge;
+    document.getElementById("orderModal").style.display =
+        "none";
 
-    document.getElementById("summaryDelivery").textContent = deliveryCharge;
-    document.getElementById("summaryTotal").textContent = total;
 }
 
-function closeOrderForm(){
 
-    document.getElementById("orderModal").classList.remove("show");
-    document.body.style.overflow = "";
+/* CALCULATE TOTAL */
+function calculateTotal(){
+
+    let delivery =
+        document.getElementById("deliveryArea").value;
+
+    let deliveryCharge = 60;
+
+    if(delivery === "outside"){
+        deliveryCharge = 120;
+    }
+
+    let total = selectedPrice + deliveryCharge;
+
+    document.getElementById("deliveryCharge").innerText =
+        deliveryCharge;
+
+    document.getElementById("totalAmount").innerText =
+        total;
+
 }
 
-function confirmOrder(){
 
-    const name =
+/* PLACE ORDER */
+function placeOrder(){
+
+    let name =
         document.getElementById("customerName").value.trim();
 
-    const phone =
+    let phone =
         document.getElementById("customerPhone").value.trim();
 
-    const address =
+    let address =
         document.getElementById("customerAddress").value.trim();
 
-    const deliveryCharge =
-        Number(document.getElementById("deliveryArea").value);
+    let area =
+        document.getElementById("deliveryArea").value;
 
-    const total = selectedProductPrice + deliveryCharge;
+    if(name === "" || phone === "" || address === ""){
 
-    if(!name || !phone || !address){
+        alert("Please fill in your Name, Phone Number and Address.");
 
-        alert("Please enter your name, phone number and address.");
         return;
+
     }
+
+
+    let deliveryText =
+        area === "dhaka"
+        ? "Inside Dhaka"
+        : "Outside Dhaka";
+
+
+    let deliveryCharge =
+        area === "dhaka"
+        ? 60
+        : 120;
+
+
+    let total =
+        selectedPrice + deliveryCharge;
+
 
     alert(
-        "Order Details
+        "ORDER RECEIVED!\n\n" +
 
-" +
-        "Product: " + selectedProductName +
-        "
-Product Price: ৳" + selectedProductPrice +
-        "
-Delivery Charge: ৳" + deliveryCharge +
-        "
-Total Amount: ৳" + total +
-        "
+        "Product: " + selectedProductName + "\n" +
 
-Name: " + name +
-        "
-Phone: " + phone +
-        "
-Address: " + address
+        "Name: " + name + "\n" +
+
+        "Phone: " + phone + "\n" +
+
+        "Address: " + address + "\n" +
+
+        "Delivery: " + deliveryText + "\n" +
+
+        "Product Price: ৳" + selectedPrice + "\n" +
+
+        "Delivery Charge: ৳" + deliveryCharge + "\n" +
+
+        "TOTAL: ৳" + total
     );
+
+
+    closeOrder();
+
 }
 
-document.getElementById("orderModal").addEventListener("click", function(event){
 
-    if(event.target === this){
-        closeOrderForm();
+/* CLOSE MODAL WHEN CLICKING OUTSIDE */
+window.onclick = function(event){
+
+    let modal =
+        document.getElementById("orderModal");
+
+    if(event.target === modal){
+
+        closeOrder();
+
     }
 
-});
+}
+
+
+/* SEARCH */
+function searchProducts(){
+
+    let search =
+        document.getElementById("search")
+        .value
+        .toLowerCase();
+
+    let products =
+        document.querySelectorAll(".product");
+
+
+    products.forEach(function(product){
+
+        let name =
+            product.dataset.name.toLowerCase();
+
+        if(name.includes(search)){
+
+            product.style.display = "";
+
+        }else{
+
+            product.style.display = "none";
+
+        }
+
+    });
+
+}
+
+
+/* FILTER */
+function filterProducts(category, button){
+
+    let products =
+        document.querySelectorAll(".product");
+
+
+    document.querySelectorAll(".filter")
+        .forEach(function(btn){
+
+            btn.classList.remove("active");
+
+        });
+
+
+    button.classList.add("active");
+
+
+    products.forEach(function(product){
+
+        if(category === "all"){
+
+            product.style.display = "";
+
+        }else{
+
+            let categories =
+                product.dataset.category;
+
+            if(categories.includes(category)){
+
+                product.style.display = "";
+
+            }else{
+
+                product.style.display = "none";
+
+            }
+
+        }
+
+    });
+
+}
 
 </script>
-
-
-<!-- ORDER MODAL -->
-<div class="order-modal" id="orderModal">
-    <div class="order-box">
-        <button class="order-close" onclick="closeOrderForm()" aria-label="Close">&times;</button>
-
-        <h2>Complete Your Order</h2>
-        <p style="color:#777;font-size:14px;">Please enter your delivery information.</p>
-
-        <div class="order-product">
-            <strong>Product:</strong> <span id="orderProductName"></span><br>
-            <strong>Product Price:</strong> ৳<span id="orderProductPrice"></span>
-        </div>
-
-        <label for="customerName">Name</label>
-        <input type="text" id="customerName" placeholder="Enter your name">
-
-        <label for="customerPhone">Phone Number</label>
-        <input type="tel" id="customerPhone" placeholder="Enter your phone number">
-
-        <label for="customerAddress">Address</label>
-        <textarea id="customerAddress" placeholder="Enter your full delivery address"></textarea>
-
-        <label for="deliveryArea">Delivery Area</label>
-        <select id="deliveryArea" onchange="updateOrderTotal()">
-            <option value="60">Inside Dhaka — Delivery ৳60</option>
-            <option value="120">Outside Dhaka — Delivery ৳120</option>
-        </select>
-
-        <div class="total-box">
-            <div class="total-row">
-                <span>Product Price</span>
-                <span>৳<span id="summaryProductPrice">0</span></span>
-            </div>
-            <div class="total-row">
-                <span>Delivery Charge</span>
-                <span>৳<span id="summaryDelivery">60</span></span>
-            </div>
-            <div class="total-row total-final">
-                <span>Total Amount</span>
-                <span>৳<span id="summaryTotal">0</span></span>
-            </div>
-        </div>
-
-        <button class="confirm-order" onclick="confirmOrder()">CONFIRM ORDER</button>
-    </div>
-</div>
 
 </body>
 </html>
