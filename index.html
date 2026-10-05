@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Classy-Timeless | Premium Watches</title>
 
 <style>
@@ -334,6 +333,55 @@ footer{
     margin-top:40px;
 }
 
+/* SOCIAL MEDIA */
+.social-links{
+    margin-top:22px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.social-links a{
+    display:inline-block;
+    color:white;
+    text-decoration:none;
+    padding:11px 18px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.2s;
+}
+
+.social-links a:hover{
+    transform:translateY(-2px);
+    opacity:.9;
+}
+
+/* INSTAGRAM */
+.instagram{
+    background:linear-gradient(
+        45deg,
+        #f9ce34,
+        #ee2a7b,
+        #6228d7
+    );
+}
+
+/* FACEBOOK */
+.facebook{
+    background:#1877F2;
+}
+
+/* TIKTOK */
+.tiktok{
+    background:#000000;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    background:#25D366;
+}
+
 @media(max-width:1000px){
     .products{
         grid-template-columns:repeat(2,1fr);
@@ -394,13 +442,17 @@ footer{
 <!-- HERO -->
 <section class="hero" id="home">
     <div class="hero-content">
+
         <h4>PREMIUM WATCH COLLECTION</h4>
+
         <h1>CLASSY-TIMELESS</h1>
+
         <p>Elegant Designs. Reliable Quality.</p>
 
         <button class="shop-btn" onclick="goToShop()">
             SHOP NOW
         </button>
+
     </div>
 </section>
 
@@ -422,21 +474,35 @@ footer{
     >
 
     <div class="filters">
-        <button class="filter active" onclick="filterProducts('all',this)">
+
+        <button
+            class="filter active"
+            onclick="filterProducts('all',this)"
+        >
             All
         </button>
 
-        <button class="filter" onclick="filterProducts('men',this)">
+        <button
+            class="filter"
+            onclick="filterProducts('men',this)"
+        >
             Men
         </button>
 
-        <button class="filter" onclick="filterProducts('women',this)">
+        <button
+            class="filter"
+            onclick="filterProducts('women',this)"
+        >
             Women
         </button>
 
-        <button class="filter" onclick="filterProducts('premium',this)">
+        <button
+            class="filter"
+            onclick="filterProducts('premium',this)"
+        >
             Premium
         </button>
+
     </div>
 
 
@@ -444,7 +510,11 @@ footer{
 
 
         <!-- PRODUCT 1 -->
-        <div class="product" data-category="men premium" data-name="Classic Black Watch">
+        <div
+            class="product"
+            data-category="men premium"
+            data-name="Classic Black Watch"
+        >
 
             <img
                 class="product-img"
@@ -454,11 +524,17 @@ footer{
 
             <div class="product-info">
 
-                <span class="badge">BEST SELLER</span>
+                <span class="badge">
+                    BEST SELLER
+                </span>
 
-                <h3>Classic Black Watch</h3>
+                <h3>
+                    Classic Black Watch
+                </h3>
 
-                <div class="price">৳2,500</div>
+                <div class="price">
+                    ৳2,500
+                </div>
 
                 <button
                     class="order-btn"
@@ -468,11 +544,16 @@ footer{
                 </button>
 
             </div>
+
         </div>
 
 
         <!-- PRODUCT 2 -->
-        <div class="product" data-category="men premium" data-name="Luxury Silver Watch">
+        <div
+            class="product"
+            data-category="men premium"
+            data-name="Luxury Silver Watch"
+        >
 
             <img
                 class="product-img"
@@ -482,11 +563,17 @@ footer{
 
             <div class="product-info">
 
-                <span class="badge">PREMIUM</span>
+                <span class="badge">
+                    PREMIUM
+                </span>
 
-                <h3>Luxury Silver Watch</h3>
+                <h3>
+                    Luxury Silver Watch
+                </h3>
 
-                <div class="price">৳3,500</div>
+                <div class="price">
+                    ৳3,500
+                </div>
 
                 <button
                     class="order-btn"
@@ -496,11 +583,16 @@ footer{
                 </button>
 
             </div>
+
         </div>
 
 
         <!-- PRODUCT 3 -->
-        <div class="product" data-category="men" data-name="Royal Black Watch">
+        <div
+            class="product"
+            data-category="men"
+            data-name="Royal Black Watch"
+        >
 
             <img
                 class="product-img"
@@ -510,11 +602,17 @@ footer{
 
             <div class="product-info">
 
-                <span class="badge">NEW</span>
+                <span class="badge">
+                    NEW
+                </span>
 
-                <h3>Royal Black Watch</h3>
+                <h3>
+                    Royal Black Watch
+                </h3>
 
-                <div class="price">৳2,900</div>
+                <div class="price">
+                    ৳2,900
+                </div>
 
                 <button
                     class="order-btn"
@@ -524,11 +622,16 @@ footer{
                 </button>
 
             </div>
+
         </div>
 
 
         <!-- PRODUCT 4 -->
-        <div class="product" data-category="women premium" data-name="Elegant Women's Watch">
+        <div
+            class="product"
+            data-category="women premium"
+            data-name="Elegant Women's Watch"
+        >
 
             <img
                 class="product-img"
@@ -538,11 +641,17 @@ footer{
 
             <div class="product-info">
 
-                <span class="badge">NEW</span>
+                <span class="badge">
+                    NEW
+                </span>
 
-                <h3>Elegant Women's Watch</h3>
+                <h3>
+                    Elegant Women's Watch
+                </h3>
 
-                <div class="price">৳3,200</div>
+                <div class="price">
+                    ৳3,200
+                </div>
 
                 <button
                     class="order-btn"
@@ -552,8 +661,8 @@ footer{
                 </button>
 
             </div>
-        </div>
 
+        </div>
 
     </div>
 
@@ -561,13 +670,22 @@ footer{
 
 
 <!-- ABOUT -->
-<section id="about" style="padding:60px 8%; text-align:center;">
+<section
+    id="about"
+    style="padding:60px 8%;text-align:center;"
+>
 
     <h2 style="font-size:35px;margin-bottom:15px;">
         About Classy-Timeless
     </h2>
 
-    <p style="font-size:18px;color:#666;line-height:1.8;">
+    <p
+        style="
+        font-size:18px;
+        color:#666;
+        line-height:1.8;
+        "
+    >
         Classy-Timeless brings elegant and premium watches
         for men and women. We focus on stylish designs,
         quality products and reliable service.
@@ -577,9 +695,14 @@ footer{
 
 
 <!-- CONTACT -->
-<section id="contact" style="padding:40px 8%;text-align:center;">
+<section
+    id="contact"
+    style="padding:40px 8%;text-align:center;"
+>
 
-    <h2>Contact Us</h2>
+    <h2>
+        Contact Us
+    </h2>
 
     <p style="margin-top:15px;">
         For product information and orders, please use the
@@ -590,13 +713,23 @@ footer{
 
 
 <!-- ORDER MODAL -->
-<div class="modal" id="orderModal">
+<div
+    class="modal"
+    id="orderModal"
+>
 
     <div class="modal-box">
 
-        <span class="close" onclick="closeOrder()">&times;</span>
+        <span
+            class="close"
+            onclick="closeOrder()"
+        >
+            &times;
+        </span>
 
-        <h2>Place Your Order</h2>
+        <h2>
+            Place Your Order
+        </h2>
 
         <div class="selected-product">
             Product:
@@ -684,7 +817,9 @@ footer{
 
             <div class="summary-row">
 
-                <span>Product Price</span>
+                <span>
+                    Product Price
+                </span>
 
                 <strong>
                     ৳<span id="productPrice">0</span>
@@ -695,7 +830,9 @@ footer{
 
             <div class="summary-row">
 
-                <span>Delivery Charge</span>
+                <span>
+                    Delivery Charge
+                </span>
 
                 <strong>
                     ৳<span id="deliveryCharge">60</span>
@@ -706,7 +843,9 @@ footer{
 
             <div class="summary-row total">
 
-                <span>Total Amount</span>
+                <span>
+                    Total Amount
+                </span>
 
                 <strong>
                     ৳<span id="totalAmount">0</span>
@@ -732,7 +871,9 @@ footer{
 <!-- FOOTER -->
 <footer>
 
-    <h3>CLASSY-TIMELESS</h3>
+    <h3>
+        CLASSY-TIMELESS
+    </h3>
 
     <p style="margin-top:10px;">
         Premium Watches • Elegant Style • Reliable Quality
@@ -741,6 +882,51 @@ footer{
     <p style="margin-top:15px;">
         © 2026 Classy-Timeless. All Rights Reserved.
     </p>
+
+
+    <!-- SOCIAL MEDIA LINKS -->
+    <div class="social-links">
+
+        <!-- INSTAGRAM -->
+        <a
+            class="instagram"
+            href="https://www.instagram.com/classytimeless01?stkn=ZTRmaWJpMGhtOTht"
+            target="_self"
+        >
+            Instagram
+        </a>
+
+
+        <!-- FACEBOOK -->
+        <a
+            class="facebook"
+            href="https://www.facebook.com/share/1KKfKf9sgB/"
+            target="_self"
+        >
+            Facebook
+        </a>
+
+
+        <!-- TIKTOK -->
+        <a
+            class="tiktok"
+            href="https://www.tiktok.com/@classytimeless?_r=1&_t=ZS-9AIVj0uPhzg"
+            target="_self"
+        >
+            TikTok
+        </a>
+
+
+        <!-- WHATSAPP -->
+        <a
+            class="whatsapp"
+            href="https://wa.me/8801631626544"
+            target="_self"
+        >
+            WhatsApp
+        </a>
+
+    </div>
 
 </footer>
 
@@ -754,32 +940,39 @@ let selectedProductName = "";
 /* GO TO SHOP */
 function goToShop(){
 
-    document.getElementById("shop").scrollIntoView({
-        behavior:"smooth"
-    });
+    document
+        .getElementById("shop")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
 
 }
 
 
 /* OPEN ORDER */
-function openOrder(productName, price){
+function openOrder(productName,price){
 
     selectedProductName = productName;
+
     selectedPrice = price;
 
-    document.getElementById("selectedProduct").innerText =
-        productName;
+    document
+        .getElementById("selectedProduct")
+        .innerText = productName;
 
-    document.getElementById("productPrice").innerText =
-        price;
+    document
+        .getElementById("productPrice")
+        .innerText = price;
 
-    document.getElementById("deliveryArea").value =
-        "dhaka";
+    document
+        .getElementById("deliveryArea")
+        .value = "dhaka";
 
     calculateTotal();
 
-    document.getElementById("orderModal").style.display =
-        "block";
+    document
+        .getElementById("orderModal")
+        .style.display = "block";
 
 }
 
@@ -787,8 +980,9 @@ function openOrder(productName, price){
 /* CLOSE ORDER */
 function closeOrder(){
 
-    document.getElementById("orderModal").style.display =
-        "none";
+    document
+        .getElementById("orderModal")
+        .style.display = "none";
 
 }
 
@@ -797,21 +991,28 @@ function closeOrder(){
 function calculateTotal(){
 
     let delivery =
-        document.getElementById("deliveryArea").value;
+        document
+        .getElementById("deliveryArea")
+        .value;
 
     let deliveryCharge = 60;
 
     if(delivery === "outside"){
+
         deliveryCharge = 120;
+
     }
 
-    let total = selectedPrice + deliveryCharge;
+    let total =
+        selectedPrice + deliveryCharge;
 
-    document.getElementById("deliveryCharge").innerText =
-        deliveryCharge;
+    document
+        .getElementById("deliveryCharge")
+        .innerText = deliveryCharge;
 
-    document.getElementById("totalAmount").innerText =
-        total;
+    document
+        .getElementById("totalAmount")
+        .innerText = total;
 
 }
 
@@ -820,20 +1021,38 @@ function calculateTotal(){
 function placeOrder(){
 
     let name =
-        document.getElementById("customerName").value.trim();
+        document
+        .getElementById("customerName")
+        .value
+        .trim();
 
     let phone =
-        document.getElementById("customerPhone").value.trim();
+        document
+        .getElementById("customerPhone")
+        .value
+        .trim();
 
     let address =
-        document.getElementById("customerAddress").value.trim();
+        document
+        .getElementById("customerAddress")
+        .value
+        .trim();
 
     let area =
-        document.getElementById("deliveryArea").value;
+        document
+        .getElementById("deliveryArea")
+        .value;
 
-    if(name === "" || phone === "" || address === ""){
 
-        alert("Please fill in your Name, Phone Number and Address.");
+    if(
+        name === "" ||
+        phone === "" ||
+        address === ""
+    ){
+
+        alert(
+            "Please fill in your Name, Phone Number and Address."
+        );
 
         return;
 
@@ -859,21 +1078,36 @@ function placeOrder(){
     alert(
         "ORDER RECEIVED!\n\n" +
 
-        "Product: " + selectedProductName + "\n" +
+        "Product: " +
+        selectedProductName +
+        "\n" +
 
-        "Name: " + name + "\n" +
+        "Name: " +
+        name +
+        "\n" +
 
-        "Phone: " + phone + "\n" +
+        "Phone: " +
+        phone +
+        "\n" +
 
-        "Address: " + address + "\n" +
+        "Address: " +
+        address +
+        "\n" +
 
-        "Delivery: " + deliveryText + "\n" +
+        "Delivery: " +
+        deliveryText +
+        "\n" +
 
-        "Product Price: ৳" + selectedPrice + "\n" +
+        "Product Price: ৳" +
+        selectedPrice +
+        "\n" +
 
-        "Delivery Charge: ৳" + deliveryCharge + "\n" +
+        "Delivery Charge: ৳" +
+        deliveryCharge +
+        "\n" +
 
-        "TOTAL: ৳" + total
+        "TOTAL: ৳" +
+        total
     );
 
 
@@ -901,18 +1135,23 @@ window.onclick = function(event){
 function searchProducts(){
 
     let search =
-        document.getElementById("search")
+        document
+        .getElementById("search")
         .value
         .toLowerCase();
 
+
     let products =
-        document.querySelectorAll(".product");
+        document
+        .querySelectorAll(".product");
 
 
     products.forEach(function(product){
 
         let name =
-            product.dataset.name.toLowerCase();
+            product.dataset.name
+            .toLowerCase();
+
 
         if(name.includes(search)){
 
@@ -930,13 +1169,15 @@ function searchProducts(){
 
 
 /* FILTER */
-function filterProducts(category, button){
+function filterProducts(category,button){
 
     let products =
-        document.querySelectorAll(".product");
+        document
+        .querySelectorAll(".product");
 
 
-    document.querySelectorAll(".filter")
+    document
+        .querySelectorAll(".filter")
         .forEach(function(btn){
 
             btn.classList.remove("active");
@@ -957,6 +1198,7 @@ function filterProducts(category, button){
 
             let categories =
                 product.dataset.category;
+
 
             if(categories.includes(category)){
 
