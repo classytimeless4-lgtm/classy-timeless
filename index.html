@@ -358,6 +358,107 @@ footer p{
     }
 
 }
+
+/* ORDER MODAL */
+.order-modal{
+    display:none;
+    position:fixed;
+    z-index:3000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.65);
+    padding:20px;
+    overflow-y:auto;
+}
+.order-modal.show{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.order-box{
+    width:100%;
+    max-width:520px;
+    background:white;
+    border-radius:12px;
+    padding:25px;
+    position:relative;
+    box-shadow:0 10px 40px rgba(0,0,0,.25);
+}
+.order-close{
+    position:absolute;
+    right:15px;
+    top:10px;
+    border:0;
+    background:transparent;
+    font-size:28px;
+    cursor:pointer;
+    color:#555;
+}
+.order-box h2{ margin-bottom:6px; }
+.order-product{
+    background:#f7f7f7;
+    padding:12px;
+    border-radius:7px;
+    margin:15px 0;
+}
+.order-box label{
+    display:block;
+    font-weight:bold;
+    font-size:14px;
+    margin:12px 0 6px;
+}
+.order-box input,
+.order-box textarea,
+.order-box select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ddd;
+    border-radius:6px;
+    font-size:14px;
+    outline:none;
+}
+.order-box textarea{
+    min-height:85px;
+    resize:vertical;
+}
+.total-box{
+    margin-top:18px;
+    padding:15px;
+    background:#111;
+    color:white;
+    border-radius:7px;
+}
+.total-row{
+    display:flex;
+    justify-content:space-between;
+    margin:7px 0;
+}
+.total-final{
+    border-top:1px solid #555;
+    padding-top:10px;
+    margin-top:10px;
+    font-size:20px;
+    font-weight:bold;
+}
+.confirm-order{
+    width:100%;
+    margin-top:15px;
+    padding:14px;
+    background:#d4af37;
+    color:#111;
+    border:0;
+    border-radius:6px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+}
+.confirm-order:hover{
+    background:#111;
+    color:white;
+}
+
 </style>
 </head>
 
@@ -807,20 +908,149 @@ product.style.display="none";
 }
 
 
-/* ORDER BUTTON */
+
+/* ORDER SYSTEM */
+
+let selectedProductName = "";
+let selectedProductPrice = 0;
 
 function orderProduct(productName,price){
 
-alert(
-productName +
-"\nPrice: ৳" +
-price +
-"\n\nOrder system will be connected in Part 2."
-);
+    selectedProductName = productName;
+    selectedProductPrice = price;
 
+    document.getElementById("orderProductName").textContent = productName;
+    document.getElementById("orderProductPrice").textContent = price;
+    document.getElementById("summaryProductPrice").textContent = price;
+
+    document.getElementById("customerName").value = "";
+    document.getElementById("customerPhone").value = "";
+    document.getElementById("customerAddress").value = "";
+    document.getElementById("deliveryArea").value = "60";
+
+    updateOrderTotal();
+
+    document.getElementById("orderModal").classList.add("show");
+    document.body.style.overflow = "hidden";
 }
 
+function updateOrderTotal(){
+
+    const deliveryCharge =
+        Number(document.getElementById("deliveryArea").value);
+
+    const total = selectedProductPrice + deliveryCharge;
+
+    document.getElementById("summaryDelivery").textContent = deliveryCharge;
+    document.getElementById("summaryTotal").textContent = total;
+}
+
+function closeOrderForm(){
+
+    document.getElementById("orderModal").classList.remove("show");
+    document.body.style.overflow = "";
+}
+
+function confirmOrder(){
+
+    const name =
+        document.getElementById("customerName").value.trim();
+
+    const phone =
+        document.getElementById("customerPhone").value.trim();
+
+    const address =
+        document.getElementById("customerAddress").value.trim();
+
+    const deliveryCharge =
+        Number(document.getElementById("deliveryArea").value);
+
+    const total = selectedProductPrice + deliveryCharge;
+
+    if(!name || !phone || !address){
+
+        alert("Please enter your name, phone number and address.");
+        return;
+    }
+
+    alert(
+        "Order Details
+
+" +
+        "Product: " + selectedProductName +
+        "
+Product Price: ৳" + selectedProductPrice +
+        "
+Delivery Charge: ৳" + deliveryCharge +
+        "
+Total Amount: ৳" + total +
+        "
+
+Name: " + name +
+        "
+Phone: " + phone +
+        "
+Address: " + address
+    );
+}
+
+document.getElementById("orderModal").addEventListener("click", function(event){
+
+    if(event.target === this){
+        closeOrderForm();
+    }
+
+});
+
 </script>
+
+
+<!-- ORDER MODAL -->
+<div class="order-modal" id="orderModal">
+    <div class="order-box">
+        <button class="order-close" onclick="closeOrderForm()" aria-label="Close">&times;</button>
+
+        <h2>Complete Your Order</h2>
+        <p style="color:#777;font-size:14px;">Please enter your delivery information.</p>
+
+        <div class="order-product">
+            <strong>Product:</strong> <span id="orderProductName"></span><br>
+            <strong>Product Price:</strong> ৳<span id="orderProductPrice"></span>
+        </div>
+
+        <label for="customerName">Name</label>
+        <input type="text" id="customerName" placeholder="Enter your name">
+
+        <label for="customerPhone">Phone Number</label>
+        <input type="tel" id="customerPhone" placeholder="Enter your phone number">
+
+        <label for="customerAddress">Address</label>
+        <textarea id="customerAddress" placeholder="Enter your full delivery address"></textarea>
+
+        <label for="deliveryArea">Delivery Area</label>
+        <select id="deliveryArea" onchange="updateOrderTotal()">
+            <option value="60">Inside Dhaka — Delivery ৳60</option>
+            <option value="120">Outside Dhaka — Delivery ৳120</option>
+        </select>
+
+        <div class="total-box">
+            <div class="total-row">
+                <span>Product Price</span>
+                <span>৳<span id="summaryProductPrice">0</span></span>
+            </div>
+            <div class="total-row">
+                <span>Delivery Charge</span>
+                <span>৳<span id="summaryDelivery">60</span></span>
+            </div>
+            <div class="total-row total-final">
+                <span>Total Amount</span>
+                <span>৳<span id="summaryTotal">0</span></span>
+            </div>
+        </div>
+
+        <button class="confirm-order" onclick="confirmOrder()">CONFIRM ORDER</button>
+    </div>
+</div>
 
 </body>
 </html>
