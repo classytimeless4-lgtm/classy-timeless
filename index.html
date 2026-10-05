@@ -1018,101 +1018,61 @@ function calculateTotal(){
 }
 
 
-/* PLACE ORDER */
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbwEljA-yT5DmjrF9li6ZSnD_0NbMEMcJMq9v7zguTInF15DM13cUNmbtn6CCjPpGvuRBw/exec";
+
 function placeOrder(){
 
-    let name =
-        document
-        .getElementById("customerName")
-        .value
-        .trim();
+    let name = document.getElementById("customerName").value.trim();
+    let phone = document.getElementById("customerPhone").value.trim();
+    let address = document.getElementById("customerAddress").value.trim();
+    let area = document.getElementById("deliveryArea").value;
 
-    let phone =
-        document
-        .getElementById("customerPhone")
-        .value
-        .trim();
-
-    let address =
-        document
-        .getElementById("customerAddress")
-        .value
-        .trim();
-
-    let area =
-        document
-        .getElementById("deliveryArea")
-        .value;
-
-
-    if(
-        name === "" ||
-        phone === "" ||
-        address === ""
-    ){
-
-        alert(
-            "Please fill in your Name, Phone Number and Address."
-        );
-
+    if(name === "" || phone === "" || address === ""){
+        alert("Please fill in your Name, Phone Number and Address.");
         return;
-
     }
 
-
     let deliveryText =
-        area === "dhaka"
-        ? "Inside Dhaka"
-        : "Outside Dhaka";
-
+        area === "dhaka" ? "Inside Dhaka" : "Outside Dhaka";
 
     let deliveryCharge =
-        area === "dhaka"
-        ? 60
-        : 120;
+        area === "dhaka" ? 60 : 120;
 
+    let total = selectedPrice + deliveryCharge;
 
-    let total =
-        selectedPrice + deliveryCharge;
-
+    fetch(GOOGLE_SHEET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: new URLSearchParams({
+            name: name,
+            phone: phone,
+            address: address,
+            deliveryArea: deliveryText,
+            deliveryCharge: deliveryCharge,
+            product: selectedProductName,
+            quantity: 1,
+            price: selectedPrice,
+            total: total
+        })
+    });
 
     alert(
         "ORDER RECEIVED!\n\n" +
-
-        "Product: " +
-        selectedProductName +
-        "\n" +
-
-        "Name: " +
-        name +
-        "\n" +
-
-        "Phone: " +
-        phone +
-        "\n" +
-
-        "Address: " +
-        address +
-        "\n" +
-
-        "Delivery: " +
-        deliveryText +
-        "\n" +
-
-        "Product Price: ৳" +
-        selectedPrice +
-        "\n" +
-
-        "Delivery Charge: ৳" +
-        deliveryCharge +
-        "\n" +
-
-        "TOTAL: ৳" +
-        total
+        "Product: " + selectedProductName + "\n" +
+        "Name: " + name + "\n" +
+        "Phone: " + phone + "\n" +
+        "Address: " + address + "\n" +
+        "Delivery: " + deliveryText + "\n" +
+        "Product Price: ৳" + selectedPrice + "\n" +
+        "Delivery Charge: ৳" + deliveryCharge + "\n" +
+        "TOTAL: ৳" + total
     );
 
-
     closeOrder();
+}
 
 }
 
