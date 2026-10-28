@@ -3,1197 +3,398 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="google-site-verification" content="zhwQJ-sZDAy9m4cGsfc_bQc97-bDVFiCzZtC4eoH8Ns" />
+<meta name="google-site-verification" content="zhwQJ-sZDAy9m4cGsfc_bQc97-bDVFiCzZtC4eoH8Ns">
+<meta name="description" content="Shop elegant watches for men and women at Classy-Timeless. Stylish designs, reliable quality and convenient ordering.">
 <title>Classy-Timeless | Premium Watches</title>
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-body{
-    background:#f6f6f6;
-    color:#111;
-}
-
-/* HEADER */
-header{
-    background:#111;
-    color:white;
-    padding:18px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    font-size:22px;
-    font-weight:bold;
-    letter-spacing:1px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin-left:25px;
-    font-size:14px;
-}
-
-.cart-btn{
-    background:#d4af37;
-    color:#111;
-    border:0;
-    padding:10px 16px;
-    border-radius:6px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-/* HERO */
-.hero{
-    min-height:430px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    background:
-    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1600&q=80")
-    center/cover;
-}
-
-.hero-content h4{
-    color:#d4af37;
-    letter-spacing:4px;
-    margin-bottom:15px;
-}
-
-.hero-content h1{
-    font-size:48px;
-    margin-bottom:15px;
-}
-
-.hero-content p{
-    font-size:18px;
-    margin-bottom:25px;
-}
-
-.hero-btn{
-    background:#d4af37;
-    border:0;
-    padding:14px 30px;
-    font-weight:bold;
-    cursor:pointer;
-    border-radius:5px;
-}
-
-/* SHOP */
-.shop{
-    padding:60px 5%;
-    max-width:1200px;
-    margin:auto;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:30px;
-}
-
-.section-title h2{
-    font-size:32px;
-}
-
-.section-title p{
-    color:#777;
-    margin-top:8px;
-}
-
-/* SEARCH */
-.search{
-    width:100%;
-    max-width:500px;
-    display:block;
-    margin:0 auto 25px;
-    padding:14px 18px;
-    border:1px solid #ddd;
-    border-radius:30px;
-    outline:none;
-}
-
-/* FILTER */
-.filters{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:35px;
-    flex-wrap:wrap;
-}
-
-.filter-btn{
-    padding:10px 20px;
-    border:1px solid #ddd;
-    background:white;
-    border-radius:25px;
-    cursor:pointer;
-}
-
-.filter-btn.active{
-    background:#111;
-    color:white;
-}
-
-/* PRODUCTS */
-.products{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:20px;
-}
-
-.product{
-    background:white;
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow:0 3px 15px rgba(0,0,0,.08);
-    transition:.2s;
-}
-
-.product:hover{
-    transform:translateY(-4px);
-}
-
-.product img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.product-info{
-    padding:17px;
-}
-
-.badge{
-    display:inline-block;
-    background:#111;
-    color:white;
-    padding:5px 8px;
-    border-radius:3px;
-    font-size:10px;
-    margin-bottom:10px;
-}
-
-.product h3{
-    font-size:17px;
-    margin-bottom:8px;
-}
-
-.price{
-    font-size:19px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.order-btn{
-    width:100%;
-    background:#111;
-    color:white;
-    border:0;
-    padding:12px;
-    border-radius:5px;
-    cursor:pointer;
-}
-
-.order-btn:hover{
-    background:#d4af37;
-    color:#111;
-}
-
-/* ABOUT */
-.about{
-    background:white;
-    text-align:center;
-    padding:65px 5%;
-}
-
-.about h2{
-    margin-bottom:15px;
-}
-
-.about p{
-    max-width:750px;
-    margin:auto;
-    color:#777;
-    line-height:1.7;
-}
-
-/* FOOTER */
-footer{
-    background:#101522;
-    color:white;
-    text-align:center;
-    padding:40px 20px;
-}
-
-footer h3{
-    margin-bottom:10px;
-}
-
-.social{
-    margin-top:20px;
-}
-
-.social a{
-    display:inline-block;
-    color:white;
-    text-decoration:none;
-    margin:5px;
-    padding:10px 15px;
-    border-radius:5px;
-    background:#222;
-}
-
-/* CART OVERLAY */
-.overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.65);
-    display:none;
-    z-index:2000;
-}
-
-.cart-box{
-    position:absolute;
-    right:0;
-    top:0;
-    width:100%;
-    max-width:520px;
-    height:100%;
-    background:white;
-    overflow-y:auto;
-    padding:25px;
-}
-
-.close{
-    float:right;
-    font-size:28px;
-    cursor:pointer;
-}
-
-.cart-box h2{
-    margin-bottom:25px;
-}
-
-/* CHECKOUT */
-.checkout{
-    margin-top:25px;
-    border-top:1px solid #ddd;
-    padding-top:20px;
-}
-
-.checkout label{
-    display:block;
-    font-weight:bold;
-    margin:15px 0 7px;
-}
-
-.checkout input,
-.checkout textarea,
-.checkout select{
-    width:100%;
-    padding:13px;
-    border:1px solid #ddd;
-    border-radius:6px;
-    outline:none;
-}
-
-.checkout textarea{
-    height:90px;
-    resize:none;
-}
-
-.delivery-options{
-    display:flex;
-    gap:10px;
-}
-
-.delivery-option{
-    flex:1;
-    border:1px solid #ddd;
-    padding:12px;
-    border-radius:7px;
-    cursor:pointer;
-}
-
-.delivery-option input{
-    width:auto;
-}
-
-.summary{
-    background:#f6f6f6;
-    padding:18px;
-    margin-top:20px;
-    border-radius:8px;
-}
-
-.summary div{
-    display:flex;
-    justify-content:space-between;
-    margin:8px 0;
-}
-
-.total{
-    font-size:20px;
-    font-weight:bold;
-    border-top:1px solid #ddd;
-    padding-top:12px;
-}
-
-.confirm{
-    width:100%;
-    margin-top:20px;
-    background:#16a34a;
-    color:white;
-    border:0;
-    padding:16px;
-    border-radius:8px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-}
-
-/* CART ITEM */
-.cart-item{
-    display:flex;
-    gap:12px;
-    border-bottom:1px solid #eee;
-    padding:15px 0;
-}
-
-.cart-item img{
-    width:70px;
-    height:70px;
-    object-fit:cover;
-    border-radius:7px;
-}
-
-.cart-item-info{
-    flex:1;
-}
-
-.qty{
-    display:flex;
-    align-items:center;
-    gap:10px;
-    margin-top:8px;
-}
-
-.qty button{
-    width:28px;
-    height:28px;
-    border:1px solid #ddd;
-    background:white;
-    cursor:pointer;
-    border-radius:5px;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-    .products{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-@media(max-width:600px){
-
-    header{
-        padding:15px;
-    }
-
-    nav{
-        display:none;
-    }
-
-    .logo{
-        font-size:18px;
-    }
-
-    .hero{
-        min-height:390px;
-    }
-
-    .hero-content h1{
-        font-size:36px;
-    }
-
-    .shop{
-        padding:40px 15px;
-    }
-
-    .products{
-        grid-template-columns:repeat(2,1fr);
-        gap:12px;
-    }
-
-    .product img{
-        height:160px;
-    }
-
-    .product-info{
-        padding:12px;
-    }
-
-    .product h3{
-        font-size:14px;
-    }
-
-    .price{
-        font-size:16px;
-    }
-
-    .cart-box{
-        max-width:100%;
-    }
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#f6f6f6;color:#111}
+header{background:#111;color:#fff;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:1000}
+.logo{font-size:22px;font-weight:bold;letter-spacing:1px}
+nav a{color:#fff;text-decoration:none;margin-left:25px;font-size:14px}
+.cart-btn{background:#d4af37;color:#111;border:0;padding:10px 16px;border-radius:6px;cursor:pointer;font-weight:bold}
+.hero{min-height:430px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),url("https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=1600&q=80") center/cover}
+.hero-content h4{color:#d4af37;letter-spacing:4px;margin-bottom:15px}
+.hero-content h1{font-size:48px;margin-bottom:15px}
+.hero-content p{font-size:18px;margin-bottom:25px}
+.hero-btn{background:#d4af37;border:0;padding:14px 30px;font-weight:bold;cursor:pointer;border-radius:5px}
+.shop{padding:60px 5%;max-width:1300px;margin:auto}
+.section-title{text-align:center;margin-bottom:30px}
+.section-title h2{font-size:32px}
+.section-title p{color:#777;margin-top:8px}
+.search{width:100%;max-width:500px;display:block;margin:0 auto 25px;padding:14px 18px;border:1px solid #ddd;border-radius:30px;outline:none}
+.filters{display:flex;justify-content:center;gap:10px;margin-bottom:35px;flex-wrap:wrap}
+.filter-btn{padding:10px 20px;border:1px solid #ddd;background:#fff;border-radius:25px;cursor:pointer}
+.filter-btn.active{background:#111;color:#fff}
+.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.product{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 3px 15px rgba(0,0,0,.08);transition:.2s}
+.product:hover{transform:translateY(-4px)}
+.product img{width:100%;height:220px;object-fit:cover;display:block}
+.product-info{padding:17px}
+.badge{display:inline-block;background:#111;color:#fff;padding:5px 8px;border-radius:3px;font-size:10px;margin-bottom:10px}
+.product h3{font-size:17px;margin-bottom:8px}
+.price{font-size:19px;font-weight:bold;margin-bottom:15px}
+.order-btn{width:100%;background:#111;color:#fff;border:0;padding:12px;border-radius:5px;cursor:pointer}
+.order-btn:hover{background:#d4af37;color:#111}
+.about{background:#fff;text-align:center;padding:65px 5%}
+.about h2{margin-bottom:15px}
+.about p{max-width:750px;margin:auto;color:#777;line-height:1.7}
+footer{background:#101522;color:#fff;text-align:center;padding:40px 20px}
+footer h3{margin-bottom:10px}
+.social{margin-top:20px}
+.social a{display:inline-block;color:#fff;text-decoration:none;margin:5px;padding:10px 15px;border-radius:5px;background:#222}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.65);display:none;z-index:2000}
+.cart-box{position:absolute;right:0;top:0;width:100%;max-width:520px;height:100%;background:#fff;overflow-y:auto;padding:25px}
+.close{float:right;font-size:28px;cursor:pointer}
+.cart-box h2{margin-bottom:25px}
+.checkout{margin-top:25px;border-top:1px solid #ddd;padding-top:20px}
+.checkout label{display:block;font-weight:bold;margin:15px 0 7px}
+.checkout input,.checkout textarea,.checkout select{width:100%;padding:13px;border:1px solid #ddd;border-radius:6px;outline:none}
+.checkout textarea{height:90px;resize:vertical}
+.delivery-options{display:flex;gap:10px}
+.delivery-option{flex:1;border:1px solid #ddd;padding:12px;border-radius:7px;cursor:pointer}
+.delivery-option input{width:auto}
+.summary{background:#f6f6f6;padding:18px;margin-top:20px;border-radius:8px}
+.summary div{display:flex;justify-content:space-between;margin:8px 0}
+.total{font-size:20px;font-weight:bold;border-top:1px solid #ddd;padding-top:12px}
+.confirm{width:100%;margin-top:20px;background:#16a34a;color:#fff;border:0;padding:16px;border-radius:8px;font-size:16px;font-weight:bold;cursor:pointer}
+.cart-item{display:flex;gap:12px;border-bottom:1px solid #eee;padding:15px 0}
+.cart-item img{width:70px;height:70px;object-fit:cover;border-radius:7px}
+.cart-item-info{flex:1}
+.qty{display:flex;align-items:center;gap:10px;margin-top:8px}
+.qty button{width:28px;height:28px;border:1px solid #ddd;background:#fff;cursor:pointer;border-radius:5px}
+@media(max-width:900px){.products{grid-template-columns:repeat(2,minmax(0,1fr))}.product img{height:200px}}
+@media(max-width:600px){header{padding:15px}.logo{font-size:17px}nav{display:none}.hero{min-height:390px;padding:20px}.hero-content h1{font-size:34px}.hero-content h4{font-size:11px;letter-spacing:2px}.shop{padding:40px 12px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.product img{height:155px}.product-info{padding:10px}.product h3{font-size:14px}.price{font-size:16px}.cart-box{max-width:100%}}
 </style>
 </head>
-
 <body>
-
-<!-- HEADER -->
 <header>
-
-<div class="logo">
-CLASSY-TIMELESS
-</div>
-
-<nav>
-<a href="#home">Home</a>
-<a href="#shop">Shop</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
-
-<button class="cart-btn" onclick="openCart()">
-🛒 Cart <span id="cartCount">0</span>
-</button>
-
+  <div class="logo">CLASSY-TIMELESS</div>
+  <nav><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <button class="cart-btn" onclick="openCart()">🛒 Cart <span id="cartCount">0</span></button>
 </header>
 
+<section class="hero" id="home"><div class="hero-content">
+  <h4>PREMIUM WATCH COLLECTION</h4>
+  <h1>CLASSY-TIMELESS</h1>
+  <p>Elegant Designs. Reliable Quality.</p>
+  <button class="hero-btn" onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">SHOP NOW</button>
+</div></section>
 
-<!-- HERO -->
-<section class="hero" id="home">
-
-<div class="hero-content">
-
-<h4>PREMIUM WATCH COLLECTION</h4>
-
-<h1>CLASSY-TIMELESS</h1>
-
-<p>Elegant Designs. Reliable Quality.</p>
-
-<button class="hero-btn"
-onclick="document.getElementById('shop').scrollIntoView()">
-SHOP NOW
-</button>
-
-</div>
-
-</section>
-
-
-<!-- SHOP -->
 <section class="shop" id="shop">
+  <div class="section-title"><h2>Our Collection</h2><p>Discover our premium watch collection</p></div>
+  <input type="text" id="search" class="search" placeholder="Search your watch..." oninput="applyProductFilters()">
+  <div class="filters">
+    <button class="filter-btn active" onclick="filterProducts('all',this)">All</button>
+    <button class="filter-btn" onclick="filterProducts('men',this)">Men</button>
+    <button class="filter-btn" onclick="filterProducts('women',this)">Women</button>
+    <button class="filter-btn" onclick="filterProducts('premium',this)">Premium</button>
+  </div>
+  <div class="products" id="products">
 
-<div class="section-title">
+    <div class="product" data-category="men premium" data-name="Classic Black Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80" alt="Classic Black Watch"><div class="product-info"><span class="badge">BEST SELLER</span><h3>Classic Black Watch</h3><div class="price">৳ 2,500</div><button class="order-btn" onclick="addToCart('Classic Black Watch',2500,'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<h2>Our Collection</h2>
+    <div class="product" data-category="men premium" data-name="Luxury Silver Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Luxury Silver Watch"><div class="product-info"><span class="badge">PREMIUM</span><h3>Luxury Silver Watch</h3><div class="price">৳ 3,500</div><button class="order-btn" onclick="addToCart('Luxury Silver Watch',3500,'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<p>Discover our premium watch collection</p>
+    <div class="product" data-category="men" data-name="Royal Black Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" alt="Royal Black Watch"><div class="product-info"><span class="badge">NEW</span><h3>Royal Black Watch</h3><div class="price">৳ 2,900</div><button class="order-btn" onclick="addToCart('Royal Black Watch',2900,'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-</div>
+    <div class="product" data-category="women premium" data-name="Elegant Womens Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=800&q=80" alt="Elegant Women's Watch"><div class="product-info"><span class="badge">NEW</span><h3>Elegant Women's Watch</h3><div class="price">৳ 3,200</div><button class="order-btn" onclick="addToCart('Elegant Women Watch',3200,'https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
+    <div class="product" data-category="men premium" data-name="Ocean Blue Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=800&q=80" alt="Ocean Blue Watch"><div class="product-info"><span class="badge">POPULAR</span><h3>Ocean Blue Watch</h3><div class="price">৳ 3,800</div><button class="order-btn" onclick="addToCart('Ocean Blue Watch',3800,'https://images.unsplash.com/photo-1533139502658-0198f920d8e8?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<input
-type="text"
-id="search"
-class="search"
-placeholder="Search your watch..."
-onkeyup="searchProducts()"
->
+    <div class="product" data-category="men premium" data-name="Green Legacy Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" alt="Green Legacy Watch"><div class="product-info"><span class="badge">CLASSIC</span><h3>Green Legacy Watch</h3><div class="price">৳ 3,000</div><button class="order-btn" onclick="addToCart('Green Legacy Watch',3000,'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
+    <div class="product" data-category="men premium" data-name="Chronograph Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&w=800&q=80" alt="Chronograph Watch"><div class="product-info"><span class="badge">PREMIUM</span><h3>Chronograph Watch</h3><div class="price">৳ 4,200</div><button class="order-btn" onclick="addToCart('Chronograph Watch',4200,'https://images.unsplash.com/photo-1542496658-e33a6d0d50f6?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<div class="filters">
+    <div class="product" data-category="men" data-name="Minimalist Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80" alt="Minimalist Watch"><div class="product-info"><span class="badge">MINIMAL</span><h3>Minimalist Watch</h3><div class="price">৳ 2,700</div><button class="order-btn" onclick="addToCart('Minimalist Watch',2700,'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<button class="filter-btn active"
-onclick="filterProducts('all',this)">
-All
-</button>
+    <div class="product" data-category="men premium" data-name="Diver Pro Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Diver Pro Watch"><div class="product-info"><span class="badge">SPORT</span><h3>Diver Pro Watch</h3><div class="price">৳ 4,500</div><button class="order-btn" onclick="addToCart('Diver Pro Watch',4500,'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<button class="filter-btn"
-onclick="filterProducts('men',this)">
-Men
-</button>
+    <div class="product" data-category="men premium" data-name="Automatic Skeleton Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80" alt="Automatic Skeleton Watch"><div class="product-info"><span class="badge">AUTOMATIC STYLE</span><h3>Automatic Skeleton</h3><div class="price">৳ 5,500</div><button class="order-btn" onclick="addToCart('Automatic Skeleton',5500,'https://images.unsplash.com/photo-1524592094714-0f0654e20314?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<button class="filter-btn"
-onclick="filterProducts('women',this)">
-Women
-</button>
+    <div class="product" data-category="men premium" data-name="Blue Horizon Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=800&q=80" alt="Blue Horizon Watch"><div class="product-info"><span class="badge">NEW</span><h3>Blue Horizon Watch</h3><div class="price">৳ 3,600</div><button class="order-btn" onclick="addToCart('Blue Horizon Watch',3600,'https://images.unsplash.com/photo-1539874754764-5a96559165b0?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<button class="filter-btn"
-onclick="filterProducts('premium',this)">
-Premium
-</button>
+    <div class="product" data-category="men premium" data-name="Golden Classic Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=800&q=80" alt="Golden Classic Watch"><div class="product-info"><span class="badge">GOLD TONE</span><h3>Golden Classic</h3><div class="price">৳ 3,900</div><button class="order-btn" onclick="addToCart('Golden Classic',3900,'https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-</div>
+    <div class="product" data-category="men" data-name="Sport Edition Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80" alt="Sport Edition Watch"><div class="product-info"><span class="badge">SPORT</span><h3>Sport Edition</h3><div class="price">৳ 3,400</div><button class="order-btn" onclick="addToCart('Sport Edition',3400,'https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
+    <div class="product" data-category="women premium" data-name="Rose Gold Beauty Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80" alt="Rose Gold Beauty Watch"><div class="product-info"><span class="badge">ELEGANT</span><h3>Rose Gold Beauty</h3><div class="price">৳ 3,300</div><button class="order-btn" onclick="addToCart('Rose Gold Beauty',3300,'https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<div class="products" id="products">
+    <div class="product" data-category="men premium" data-name="Heritage Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" alt="Heritage Watch"><div class="product-info"><span class="badge">HERITAGE</span><h3>Heritage Watch</h3><div class="price">৳ 4,800</div><button class="order-btn" onclick="addToCart('Heritage Watch',4800,'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
+    <div class="product" data-category="women" data-name="Petite Rose Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80" alt="Petite Rose Watch"><div class="product-info"><span class="badge">WOMEN</span><h3>Petite Rose Watch</h3><div class="price">৳ 2,200</div><button class="order-btn" onclick="addToCart('Petite Rose Watch',2200,'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<!-- PRODUCT 1 -->
+    <div class="product" data-category="men premium" data-name="Midnight Steel Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?auto=format&fit=crop&w=800&q=80" alt="Midnight Steel Watch"><div class="product-info"><span class="badge">STEEL</span><h3>Midnight Steel</h3><div class="price">৳ 4,100</div><button class="order-btn" onclick="addToCart('Midnight Steel',4100,'https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<div class="product"
-data-category="men premium"
-data-name="Classic Black Watch">
+    <div class="product" data-category="men" data-name="Brown Leather Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80" alt="Brown Leather Watch"><div class="product-info"><span class="badge">LEATHER STYLE</span><h3>Brown Leather Watch</h3><div class="price">৳ 2,800</div><button class="order-btn" onclick="addToCart('Brown Leather Watch',2800,'https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<img src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80">
+    <div class="product" data-category="women premium" data-name="Silver Charm Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80" alt="Silver Charm Watch"><div class="product-info"><span class="badge">WOMEN</span><h3>Silver Charm Watch</h3><div class="price">৳ 2,600</div><button class="order-btn" onclick="addToCart('Silver Charm Watch',2600,'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<div class="product-info">
+    <div class="product" data-category="men premium" data-name="Executive Gold Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80" alt="Executive Gold Watch"><div class="product-info"><span class="badge">EXECUTIVE</span><h3>Executive Gold Watch</h3><div class="price">৳ 4,600</div><button class="order-btn" onclick="addToCart('Executive Gold Watch',4600,'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<span class="badge">BEST SELLER</span>
+    <div class="product" data-category="men" data-name="Urban Classic Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80" alt="Urban Classic Watch"><div class="product-info"><span class="badge">CLASSIC</span><h3>Urban Classic Watch</h3><div class="price">৳ 2,400</div><button class="order-btn" onclick="addToCart('Urban Classic Watch',2400,'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<h3>Classic Black Watch</h3>
+    <div class="product" data-category="women premium" data-name="Pearl Elegance Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80" alt="Pearl Elegance Watch"><div class="product-info"><span class="badge">ELEGANT</span><h3>Pearl Elegance Watch</h3><div class="price">৳ 2,900</div><button class="order-btn" onclick="addToCart('Pearl Elegance Watch',2900,'https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<div class="price">৳ 2,500</div>
+    <div class="product" data-category="men premium" data-name="Black Steel Pro Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80" alt="Black Steel Pro Watch"><div class="product-info"><span class="badge">STEEL</span><h3>Black Steel Pro</h3><div class="price">৳ 3,700</div><button class="order-btn" onclick="addToCart('Black Steel Pro',3700,'https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-<button class="order-btn"
-onclick="addToCart(
-'Classic Black Watch',
-2500,
-'https://images.unsplash.com/photo-1524805444758-089113d48a6d?auto=format&fit=crop&w=800&q=80'
-)">
-ORDER NOW
-</button>
+    <div class="product" data-category="women premium" data-name="Rose Crystal Watch"><img loading="lazy" src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=800&q=80" alt="Rose Crystal Watch"><div class="product-info"><span class="badge">ROSE GOLD</span><h3>Rose Crystal Watch</h3><div class="price">৳ 3,500</div><button class="order-btn" onclick="addToCart('Rose Crystal Watch',3500,'https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=800&q=80')">ORDER NOW</button></div></div>
 
-</div>
-</div>
-
-
-<!-- PRODUCT 2 -->
-
-<div class="product"
-data-category="men premium"
-data-name="Luxury Silver Watch">
-
-<img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80">
-
-<div class="product-info">
-
-<span class="badge">PREMIUM</span>
-
-<h3>Luxury Silver Watch</h3>
-
-<div class="price">৳ 3,500</div>
-
-<button class="order-btn"
-onclick="addToCart(
-'Luxury Silver Watch',
-3500,
-'https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80'
-)">
-ORDER NOW
-</button>
-
-</div>
-</div>
-
-
-<!-- PRODUCT 3 -->
-
-<div class="product"
-data-category="men"
-data-name="Royal Black Watch">
-
-<img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80">
-
-<div class="product-info">
-
-<span class="badge">NEW</span>
-
-<h3>Royal Black Watch</h3>
-
-<div class="price">৳ 2,900</div>
-
-<button class="order-btn"
-onclick="addToCart(
-'Royal Black Watch',
-2900,
-'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=800&q=80'
-)">
-ORDER NOW
-</button>
-
-</div>
-</div>
-
-
-<!-- PRODUCT 4 -->
-
-<div class="product"
-data-category="women premium"
-data-name="Elegant Women's Watch">
-
-<img src="https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=800&q=80">
-
-<div class="product-info">
-
-<span class="badge">NEW</span>
-
-<h3>Elegant Women's Watch</h3>
-
-<div class="price">৳ 3,200</div>
-
-<button class="order-btn"
-onclick="addToCart(
-'Elegant Women Watch',
-3200,
-'https://images.unsplash.com/photo-1526045431048-f857369baa09?auto=format&fit=crop&w=800&q=80'
-)">
-ORDER NOW
-</button>
-
-</div>
-</div>
-
-
-</div>
-
+  </div>
+ </section>  <section class="about" id="about">
+  <h2>About Classy-Timeless</h2>
+  <p>Classy-Timeless brings elegant watches for men and women. We focus on stylish designs, reliable quality products and customer satisfaction.</p>
 </section>
-
-
-<!-- ABOUT -->
-
-<section class="about" id="about">
-
-<h2>About Classy-Timeless</h2>
-
-<p>
-Classy-Timeless brings elegant and premium watches for men and women.
-We focus on stylish designs, reliable quality products and customer satisfaction.
-</p>
-
-</section>
-
-
-<!-- FOOTER -->
 
 <footer id="contact">
-
-<h3>CLASSY-TIMELESS</h3>
-
-<p>Premium Watches • Elegant Style • Reliable Quality</p>
-
-<div class="social">
-
-<a href="https://www.instagram.com/classytimeless01/"
-target="_blank" rel="noopener noreferrer">
-Instagram
-</a>
-
-<a href="https://www.facebook.com/share/1FXR63qwbt/"
-target="_blank" rel="noopener noreferrer">
-Facebook
-</a>
-
-<a href="https://www.tiktok.com/@classytimeless"
-target="_blank" rel="noopener noreferrer">
-TikTok
-</a>
-
-<a href="https://wa.me/8801631626544"
-target="_blank" rel="noopener noreferrer">
-WhatsApp
-</a>
-</div>
-
-<br>
-
-<p>© 2026 Classy-Timeless. All Rights Reserved.</p>
-
+  <h3>CLASSY-TIMELESS</h3>
+  <p>Premium Watches • Elegant Style • Reliable Quality</p>
+  <div class="social">
+    <a href="https://www.instagram.com/classytimeless01/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://www.facebook.com/share/1FXR63qwbt/" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="https://www.tiktok.com/@classytimeless" target="_blank" rel="noopener noreferrer">TikTok</a>
+    <a href="https://wa.me/8801631626544" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </div>
+  <br>
+  <p>© 2026 Classy-Timeless. All Rights Reserved.</p>
 </footer>
 
-
-<!-- CART / CHECKOUT -->
-
 <div class="overlay" id="cartOverlay">
+  <div class="cart-box">
+    <span class="close" onclick="closeCart()" aria-label="Close cart">×</span>
+    <h2>আপনার অর্ডার</h2>
+    <div id="cartItems"></div>
 
-<div class="cart-box">
+    <div class="checkout">
+      <h3>অর্ডার সম্পন্ন করতে তথ্য দিন</h3>
 
-<span class="close" onclick="closeCart()">×</span>
+      <label for="customerName">আপনার নাম *</label>
+      <input type="text" id="customerName" placeholder="সম্পূর্ণ নাম লিখুন" autocomplete="name">
 
-<h2>আপনার অর্ডার</h2>
+      <label for="customerPhone">মোবাইল নম্বর *</label>
+      <input type="tel" id="customerPhone" placeholder="01XXXXXXXXX" autocomplete="tel">
 
-<div id="cartItems"></div>
+      <label for="customerAddress">সম্পূর্ণ ঠিকানা *</label>
+      <textarea id="customerAddress" placeholder="বাড়ি, রোড, এলাকা, জেলা" autocomplete="street-address"></textarea>
 
+      <label>ডেলিভারি এলাকা *</label>
+      <div class="delivery-options">
+        <label class="delivery-option">
+          <input type="radio" name="delivery" value="60" checked onchange="updateTotal()">
+          ঢাকার ভিতরে<br><b>৳60</b>
+        </label>
+        <label class="delivery-option">
+          <input type="radio" name="delivery" value="120" onchange="updateTotal()">
+          ঢাকার বাইরে<br><b>৳120</b>
+        </label>
+      </div>
 
-<div class="checkout">
+      <label for="payment">পেমেন্ট মেথড</label>
+      <select id="payment">
+        <option>Cash on Delivery</option>
+      </select>
 
-<h3>অর্ডার সম্পন্ন করতে তথ্য দিন</h3>
+      <div class="summary">
+        <div><span>সাব-টোটাল</span><strong>৳ <span id="subtotal">0</span></strong></div>
+        <div><span>ডেলিভারি চার্জ</span><strong>৳ <span id="delivery">60</span></strong></div>
+        <div class="total"><span>সর্বমোট</span><strong>৳ <span id="total">60</span></strong></div>
+      </div>
 
-<label>আপনার নাম *</label>
-
-<input
-type="text"
-id="customerName"
-placeholder="সম্পূর্ণ নাম লিখুন"
->
-
-
-<label>মোবাইল নম্বর *</label>
-
-<input
-type="tel"
-id="customerPhone"
-placeholder="01XXXXXXXXX"
->
-
-
-<label>সম্পূর্ণ ঠিকানা *</label>
-
-<textarea
-id="customerAddress"
-placeholder="বাড়ি, রোড, এলাকা, জেলা"
-></textarea>
-
-
-<label>ডেলিভারি এলাকা *</label>
-
-<div class="delivery-options">
-
-<label class="delivery-option">
-
-<input
-type="radio"
-name="delivery"
-value="60"
-checked
-onchange="updateTotal()"
->
-
-ঢাকার ভিতরে
-<br>
-<b>৳60</b>
-
-</label>
-
-
-<label class="delivery-option">
-
-<input
-type="radio"
-name="delivery"
-value="120"
-onchange="updateTotal()"
->
-
-ঢাকার বাইরে
-<br>
-<b>৳120</b>
-
-</label>
-
+      <button class="confirm" onclick="confirmOrder()">🛒 অর্ডার কনফার্ম করুন</button>
+    </div>
+  </div>
 </div>
-
-
-<label>পেমেন্ট মেথড</label>
-
-<select id="payment">
-
-<option>Cash on Delivery</option>
-
-</select>
-
-
-<div class="summary">
-
-<div>
-<span>সাব-টোটাল</span>
-<strong>৳ <span id="subtotal">0</span></strong>
-</div>
-
-<div>
-<span>ডেলিভারি চার্জ</span>
-<strong>৳ <span id="delivery">60</span></strong>
-</div>
-
-<div class="total">
-<span>সর্বমোট</span>
-<strong>৳ <span id="total">0</span></strong>
-</div>
-
-</div>
-
-
-<button class="confirm"
-onclick="confirmOrder()">
-
-🛒 অর্ডার কনফার্ম করুন
-
-</button>
-
-</div>
-
-</div>
-
-</div>
-
 
 <script>
+"use strict";
 
 let cart = [];
+let activeCategory = "all";
 
+function addToCart(name, price, image) {
+  const existing = cart.find(item => item.name === name);
 
-/* ADD TO CART */
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push({ name, price, image, qty: 1 });
+  }
 
-function addToCart(name,price,image){
-
-let existing = cart.find(item => item.name === name);
-
-if(existing){
-
-existing.qty++;
-
-}else{
-
-cart.push({
-name:name,
-price:price,
-image:image,
-qty:1
-});
-
+  updateCart();
+  openCart();
 }
 
-updateCart();
+function updateCart() {
+  const container = document.getElementById("cartItems");
+  container.innerHTML = "";
+  let count = 0;
 
-openCart();
+  cart.forEach((item, index) => {
+    count += item.qty;
 
+    const row = document.createElement("div");
+    row.className = "cart-item";
+
+    const img = document.createElement("img");
+    img.src = item.image;
+    img.alt = item.name;
+
+    const info = document.createElement("div");
+    info.className = "cart-item-info";
+
+    const title = document.createElement("b");
+    title.textContent = item.name;
+
+    const price = document.createElement("div");
+    price.textContent = "৳ " + item.price.toLocaleString();
+
+    const qty = document.createElement("div");
+    qty.className = "qty";
+
+    const minus = document.createElement("button");
+    minus.type = "button";
+    minus.textContent = "−";
+    minus.setAttribute("aria-label", "Decrease quantity");
+    minus.onclick = () => changeQty(index, -1);
+
+    const number = document.createElement("span");
+    number.textContent = item.qty;
+
+    const plus = document.createElement("button");
+    plus.type = "button";
+    plus.textContent = "+";
+    plus.setAttribute("aria-label", "Increase quantity");
+    plus.onclick = () => changeQty(index, 1);
+
+    qty.append(minus, number, plus);
+    info.append(title, price, qty);
+    row.append(img, info);
+    container.appendChild(row);
+  });
+
+  document.getElementById("cartCount").textContent = count;
+  updateTotal();
 }
 
+function changeQty(index, value) {
+  if (!cart[index]) return;
 
-/* UPDATE CART */
+  cart[index].qty += value;
 
-function updateCart(){
+  if (cart[index].qty <= 0) {
+    cart.splice(index, 1);
+  }
 
-let container = document.getElementById("cartItems");
+  updateCart();
+}
 
-container.innerHTML = "";
+function updateTotal() {
+  const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const selected = document.querySelector('input[name="delivery"]:checked');
+  const deliveryCharge = selected ? Number(selected.value) : 60;
 
-let count = 0;
-let subtotal = 0;
+  document.getElementById("subtotal").textContent = subtotal.toLocaleString("en-US");
+  document.getElementById("delivery").textContent = deliveryCharge.toLocaleString("en-US");
+  document.getElementById("total").textContent = (subtotal + deliveryCharge).toLocaleString("en-US");
+}
 
-cart.forEach((item,index)=>{
+function openCart() {
+  document.getElementById("cartOverlay").style.display = "block";
+  document.body.style.overflow = "hidden";
+  updateCart();
+}
 
-count += item.qty;
+function closeCart() {
+  document.getElementById("cartOverlay").style.display = "none";
+  document.body.style.overflow = "auto";
+}
 
-subtotal += item.price * item.qty;
+function confirmOrder() {
+  if (cart.length === 0) {
+    alert("প্রথমে একটি পণ্য নির্বাচন করুন।");
+    return;
+  }
 
-container.innerHTML += `
+  const name = document.getElementById("customerName").value.trim();
+  const phone = document.getElementById("customerPhone").value.trim();
+  const address = document.getElementById("customerAddress").value.trim();
 
-<div class="cart-item">
+  if (!name || !phone || !address) {
+    alert("দয়া করে নাম, মোবাইল নম্বর এবং ঠিকানা পূরণ করুন।");
+    return;
+  }
 
-<img src="${item.image}">
+  const phoneDigits = phone.replace(/[\s\-+]/g, "");
 
-<div class="cart-item-info">
+  if (!/^(?:01[3-9]\d{8}|8801[3-9]\d{8})$/.test(phoneDigits)) {
+    alert("সঠিক বাংলাদেশি মোবাইল নম্বর লিখুন।");
+    return;
+  }
 
-<b>${item.name}</b>
+  const selected = document.querySelector('input[name="delivery"]:checked');
+  const deliveryCharge = selected ? Number(selected.value) : 60;
+  const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+  const total = subtotal + deliveryCharge;
 
-<div>৳ ${item.price}</div>
+  // পণ্যের নাম, দাম, পরিমাণ এবং ছবির লিংক WhatsApp-এ যাবে।
+  const products = cart.map(item =>
+    "• " + item.name +
+    " × " + item.qty +
+    " = ৳" + (item.price * item.qty).toLocaleString("en-US") +
+    "\n🖼️ Product photo: " + item.image
+  ).join("\n\n");
 
-<div class="qty">
+  // WhatsApp নম্বর আন্তর্জাতিক ফরম্যাটে।
+  const whatsappNumber = "8801631626544";
 
-<button onclick="changeQty(${index},-1)">−</button>
+  const message =
+    "🛍️ NEW ORDER - CLASSY-TIMELESS\n\n" +
+    "👤 Name: " + name +
+    "\n📱 Phone: " + phone +
+    "\n📍 Address: " + address +
+    "\n\n⌚ Products:\n" + products +
+    "\n\n🚚 Delivery: ৳" + deliveryCharge.toLocaleString("en-US") +
+    "\n💰 TOTAL: ৳" + total.toLocaleString("en-US") +
+    "\n\n💳 Payment: Cash on Delivery";
 
-<span>${item.qty}</span>
+  const url = "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank", "noopener,noreferrer");
+}
 
-<button onclick="changeQty(${index},1)">+</button>
+function filterProducts(category, button) {
+  activeCategory = category;
 
-</div>
+  document.querySelectorAll(".filter-btn").forEach(btn => {
+    btn.classList.remove("active");
+  });
 
-</div>
+  button.classList.add("active");
+  applyProductFilters();
+}
 
-</div>
+function applyProductFilters() {
+  const value = document.getElementById("search").value.trim().toLowerCase();
 
-`;
+  document.querySelectorAll(".product").forEach(product => {
+    const name = (product.dataset.name || "").toLowerCase();
+    const categories = (product.dataset.category || "").split(/\s+/);
 
+    const matchesCategory = activeCategory === "all" || categories.includes(activeCategory);
+    const matchesSearch = name.includes(value);
+
+    product.style.display = matchesCategory && matchesSearch ? "" : "none";
+  });
+}
+
+document.getElementById("cartOverlay").addEventListener("click", function(event) {
+  if (event.target === this) closeCart();
 });
 
-
-document.getElementById("cartCount").innerText = count;
-
-document.getElementById("subtotal").innerText = subtotal.toLocaleString();
+document.addEventListener("keydown", function(event) {
+  if (event.key === "Escape") closeCart();
+});
 
 updateTotal();
-
-}
-
-
-/* QUANTITY */
-
-function changeQty(index,value){
-
-cart[index].qty += value;
-
-if(cart[index].qty <= 0){
-
-cart.splice(index,1);
-
-}
-
-updateCart();
-
-}
-
-
-/* TOTAL */
-
-function updateTotal(){
-
-let subtotal = cart.reduce(
-(sum,item)=>sum + item.price * item.qty,
-0
-);
-
-let delivery =
-document.querySelector(
-'input[name="delivery"]:checked'
-);
-
-let deliveryCharge =
-delivery ? Number(delivery.value) : 60;
-
-let total = subtotal + deliveryCharge;
-
-document.getElementById("subtotal").innerText =
-subtotal.toLocaleString();
-
-document.getElementById("delivery").innerText =
-deliveryCharge.toLocaleString();
-
-document.getElementById("total").innerText =
-total.toLocaleString();
-
-}
-
-
-/* OPEN CART */
-
-function openCart(){
-
-document.getElementById("cartOverlay").style.display="block";
-
-document.body.style.overflow="hidden";
-
-updateCart();
-
-}
-
-
-/* CLOSE CART */
-
-function closeCart(){
-
-document.getElementById("cartOverlay").style.display="none";
-
-document.body.style.overflow="auto";
-
-}
-
-
-/* CONFIRM ORDER */
-
-function confirmOrder(){
-
-if(cart.length === 0){
-
-alert("প্রথমে একটি পণ্য নির্বাচন করুন।");
-
-return;
-
-}
-
-
-let name =
-document.getElementById("customerName").value.trim();
-
-let phone =
-document.getElementById("customerPhone").value.trim();
-
-let address =
-document.getElementById("customerAddress").value.trim();
-
-
-if(!name || !phone || !address){
-
-alert("দয়া করে নাম, মোবাইল নম্বর এবং ঠিকানা পূরণ করুন।");
-
-return;
-
-}
-
-
-let delivery =
-document.querySelector(
-'input[name="delivery"]:checked'
-);
-
-let deliveryCharge =
-delivery ? Number(delivery.value) : 60;
-
-
-let subtotal =
-cart.reduce(
-(sum,item)=>sum + item.price * item.qty,
-0
-);
-
-
-let total = subtotal + deliveryCharge;
-
-
-let products = "";
-
-cart.forEach(item=>{
-
-products +=
-"• " + item.name +
-" × " + item.qty +
-" = ৳" +
-(item.price * item.qty).toLocaleString() +
-"\n";
-
-});
-
-
-=================================================
-IMPORTANT:
-এখানে তোমার WhatsApp নম্বর বসাবে।
-বাংলাদেশের নম্বর 880 দিয়ে শুরু করবে।
-যেমন:
-8801631626544
-হলে:
-8801631626544
-=================================================
-/
-let whatsappNumber = "8801631626544";
-
-
-let message =
-"🛍️ *NEW ORDER - CLASSY-TIMELESS*\n\n" +
-
-"👤 Name: " + name + "\n" +
-
-"📱 Phone: " + phone + "\n" +
-
-"📍 Address: " + address + "\n\n" +
-
-"⌚ *Products:*\n" +
-
-products +
-
-"\n🚚 Delivery: ৳" +
-deliveryCharge.toLocaleString() +
-
-"\n💰 *TOTAL: ৳" +
-total.toLocaleString() +
-
-"\n\n💳 Payment: Cash on Delivery";
-
-
-let url =
-"https://wa.me/" +
-whatsappNumber +
-"?text=" +
-encodeURIComponent(message);
-
-
-window.open(url,"_blank");
-
-
-alert(
-"আপনার অর্ডারটি WhatsApp-এ পাঠানো হচ্ছে।"
-);
-
-}
-
- 
-/* SEARCH */
-
-function searchProducts(){
-
-let value =
-document.getElementById("search")
-.value
-.toLowerCase();
-
-document.querySelectorAll(".product")
-.forEach(product=>{
-
-let name =
-product.dataset.name.toLowerCase();
-
-product.style.display =
-name.includes(value)
-? ""
-: "none";
-
-});
-
-}
-
-
-/* FILTER */
-
-function filterProducts(category,button){
-
-document
-.querySelectorAll(".filter-btn")
-.forEach(btn=>{
-btn.classList.remove("active");
-});
-
-button.classList.add("active");
-
-
-document
-.querySelectorAll(".product")
-.forEach(product=>{
-
-let categories =
-product.dataset.category;
-
-if(category === "all" ||
-categories.includes(category)){
-
-product.style.display="";
-
-}else{
-
-product.style.display="none";
-
-}
-
-});
-
-}
-
 </script>
-
 </body>
 </html>
